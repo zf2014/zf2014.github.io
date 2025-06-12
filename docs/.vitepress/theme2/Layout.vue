@@ -1,27 +1,13 @@
 <script setup lang="ts">
   import { useData } from 'vitepress';
-
-  interface Frontmatter {
-    home?: boolean;
-  }
-
-  interface SiteData {
-    title: string;
-    description: string;
-  }
-
-  // https://vitepress.dev/reference/runtime-api#usedata
-  const { site, frontmatter } = useData<{
-    frontmatter: Frontmatter;
-    site: SiteData;
-  }>();
+  const { site, frontmatter } = useData();
 </script>
 
 <template>
   <div v-if="frontmatter?.home">
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
-    <ul>
+    <ul class="flex list-none">
       <li>
         <a href="/markdown-examples.html">Markdown Examples</a>
       </li>

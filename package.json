@@ -5,6 +5,11 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@unocss/preset-wind3": "^66.2.0",
+    "vite-plugin-vue-devtools": "^7.7.6",
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "unocss": "^66.2.0"
   }
 }
